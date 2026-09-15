@@ -373,6 +373,28 @@ p {
   border-color: color-mix(in srgb, var(--accent-strong) 55%, var(--line));
 }
 
+.notice-band {
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+}
+
+.notice-band strong,
+.notice-band span {
+  display: block;
+}
+
+.notice-band strong {
+  margin-bottom: 0.35rem;
+}
+
+.notice-band span {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .split,
 .section-heading,
 .promise {
