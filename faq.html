@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAQ | MendMode</title>
+    <meta name="description" content="Answers to common questions about MendMode remote tech and software support.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="MendMode home">
+        <img src="assets/mendmode-mark.svg" alt="" width="40" height="40">
+        <span>MendMode</span>
+      </a>
+      <nav class="nav-links" aria-label="Site pages">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="process.html">Process</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+      </nav>
+      <button class="header-cta contact-trigger" type="button">Contact</button>
+      <button class="theme-button" type="button" aria-label="Change color theme" title="Change theme"><span aria-hidden="true"></span></button>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="faq-title">
+        <p class="eyebrow">FAQ</p>
+        <h1 id="faq-title">Questions people ask first.</h1>
+        <p class="lede">Simple answers before you reach out.</p>
+      </section>
+
+      <section class="section">
+        <div class="faq-list">
+          <details open>
+            <summary>Can MendMode help remotely?</summary>
+            <p>Yes. Most software, setup, account, browser, and workflow issues can be handled remotely through chat, screenshots, or guided steps.</p>
+          </details>
+          <details>
+            <summary>How fast do you reply?</summary>
+            <p>Send the issue through Contact and include the app, device, and what already happened. You will get a clearer next step as soon as possible.</p>
+          </details>
+          <details>
+            <summary>What if the issue cannot be fixed?</summary>
+            <p>You still get a diagnosis, the likely cause, and the best next option, such as replacing a tool, contacting a provider, or changing setup.</p>
+          </details>
+          <details>
+            <summary>Do I need to understand tech first?</summary>
+            <p>No. Explain the problem in normal words. MendMode turns the messy details into practical steps.</p>
+          </details>
+          <details>
+            <summary>Can you help with phones and laptops?</summary>
+            <p>Yes. MendMode can help with common phone, laptop, browser, app, account, and setup problems.</p>
+          </details>
+          <details>
+            <summary>Will my email or WhatsApp number show on the site?</summary>
+            <p>No. Visitors only see Contact buttons first. The Email and WhatsApp options appear inside the contact popup.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+      <div class="modal-card">
+        <button class="modal-close" type="button" aria-label="Close contact options">×</button>
+        <p class="eyebrow">Contact MendMode</p>
+        <h2 id="contact-modal-title">Choose how to reach us.</h2>
+        <p>Send the problem, the device or app involved, and anything you already tried.</p>
+        <div class="modal-actions">
+          <a class="button primary" href="mailto:mendmodehelp@gmail.com">Email</a>
+          <a class="button secondary" href="https://wa.me/2348143656972" rel="noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a class="brand footer-brand" href="index.html" aria-label="MendMode home">
+        <img src="assets/mendmode-mark.svg" alt="" width="32" height="32">
+        <span>MendMode</span>
+      </a>
+      <span>Tech help that gets things working.</span>
+      <span id="local-time" aria-live="polite"></span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

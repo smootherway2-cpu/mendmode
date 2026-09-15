@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pricing | MendMode</title>
+    <meta name="description" content="Simple MendMode help packages for quick fixes, setup help, and full cleanup.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="MendMode home">
+        <img src="assets/mendmode-mark.svg" alt="" width="40" height="40">
+        <span>MendMode</span>
+      </a>
+      <nav class="nav-links" aria-label="Site pages">
+        <a href="services.html">Services</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+        <a href="process.html">Process</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <button class="header-cta contact-trigger" type="button">Contact</button>
+      <button class="theme-button" type="button" aria-label="Change color theme" title="Change theme"><span aria-hidden="true"></span></button>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="pricing-title">
+        <p class="eyebrow">Pricing</p>
+        <h1 id="pricing-title">Simple help packages.</h1>
+        <p class="lede">Clear starting points for different kinds of tech problems. Final pricing can depend on the issue, but these packages make it easy to begin.</p>
+      </section>
+
+      <section class="section">
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div>
+              <p class="price-label">Quick Fix</p>
+              <h3>Small issue, fast help</h3>
+              <p>Best for one clear problem like an app error, login issue, setup question, or browser trouble.</p>
+            </div>
+            <ul>
+              <li>Basic diagnosis</li>
+              <li>One focused issue</li>
+              <li>Clear next steps</li>
+            </ul>
+            <button class="button secondary contact-trigger" type="button">Ask About This</button>
+          </article>
+
+          <article class="price-card featured">
+            <div>
+              <p class="price-label">Setup Help</p>
+              <h3>Get tools working properly</h3>
+              <p>For new devices, software installs, app configuration, email setup, accounts, and workflow setup.</p>
+            </div>
+            <ul>
+              <li>Setup and configuration</li>
+              <li>Usage guidance</li>
+              <li>Follow-up notes</li>
+            </ul>
+            <button class="button primary contact-trigger" type="button">Start Here</button>
+          </article>
+
+          <article class="price-card">
+            <div>
+              <p class="price-label">Full Cleanup</p>
+              <h3>Clean up the bigger mess</h3>
+              <p>For slow systems, messy files, poor organization, backup setup, security basics, and repeated friction.</p>
+            </div>
+            <ul>
+              <li>System review</li>
+              <li>Cleanup plan</li>
+              <li>Prevention tips</li>
+            </ul>
+            <button class="button secondary contact-trigger" type="button">Ask About This</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+      <div class="modal-card">
+        <button class="modal-close" type="button" aria-label="Close contact options">×</button>
+        <p class="eyebrow">Contact MendMode</p>
+        <h2 id="contact-modal-title">Choose how to reach us.</h2>
+        <p>Send the problem, the device or app involved, and anything you already tried.</p>
+        <div class="modal-actions">
+          <a class="button primary" href="mailto:mendmodehelp@gmail.com">Email</a>
+          <a class="button secondary" href="https://wa.me/2348143656972" rel="noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a class="brand footer-brand" href="index.html" aria-label="MendMode home">
+        <img src="assets/mendmode-mark.svg" alt="" width="32" height="32">
+        <span>MendMode</span>
+      </a>
+      <span>Tech help that gets things working.</span>
+      <span id="local-time" aria-live="polite"></span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
