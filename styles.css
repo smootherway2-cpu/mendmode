@@ -481,6 +481,14 @@ p {
   text-transform: uppercase;
 }
 
+.price {
+  margin-bottom: 1rem !important;
+  color: var(--text) !important;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
 .price-card ul {
   display: grid;
   gap: 0.65rem;

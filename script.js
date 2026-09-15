@@ -54,6 +54,7 @@ function buildRequestMessage(form) {
   const data = new FormData(form);
   const name = data.get("name") || "";
   const device = data.get("device") || "";
+  const selectedPackage = data.get("package") || "Not sure yet";
   const issue = data.get("issue") || "";
   const date = data.get("date") || "Not selected";
   const time = data.get("time") || "Not selected";
@@ -64,6 +65,7 @@ function buildRequestMessage(form) {
     "",
     `Name: ${name}`,
     `Device/app: ${device}`,
+    `Package: ${selectedPackage}`,
     `Issue: ${issue}`,
     `Preferred date: ${date}`,
     `Preferred time: ${time}`,
