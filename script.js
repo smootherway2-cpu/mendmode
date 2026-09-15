@@ -7,6 +7,15 @@ const modalClose = document.querySelector(".modal-close");
 const contactForms = document.querySelectorAll(".contact-form");
 const currencyOptions = document.querySelectorAll(".currency-option");
 const priceLabels = document.querySelectorAll(".price[data-ngn]");
+const focusableSelector = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])"
+].join(",");
+let lastFocusedElement = null;
 const exchangeRates = {
   NGN: 1,
   USD: 1325,
@@ -30,13 +39,15 @@ themeButton.addEventListener("click", () => {
   }
 });
 
-function openContactModal() {
+function openContactModal(event) {
+  lastFocusedElement = event.currentTarget;
   contactModal.hidden = false;
   modalClose.focus();
 }
 
 function closeContactModal() {
   contactModal.hidden = true;
+  lastFocusedElement?.focus();
 }
 
 contactTriggers.forEach((trigger) => {
@@ -52,8 +63,33 @@ contactModal.addEventListener("click", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && !contactModal.hidden) {
+  if (contactModal.hidden) {
+    return;
+  }
+
+  if (event.key === "Escape") {
     closeContactModal();
+    return;
+  }
+
+  if (event.key !== "Tab") {
+    return;
+  }
+
+  const focusableItems = Array.from(contactModal.querySelectorAll(focusableSelector));
+  const firstItem = focusableItems[0];
+  const lastItem = focusableItems.at(-1);
+
+  if (!firstItem || !lastItem) {
+    return;
+  }
+
+  if (event.shiftKey && document.activeElement === firstItem) {
+    event.preventDefault();
+    lastItem.focus();
+  } else if (!event.shiftKey && document.activeElement === lastItem) {
+    event.preventDefault();
+    firstItem.focus();
   }
 });
 
