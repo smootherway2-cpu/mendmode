@@ -123,12 +123,43 @@
       <div class="modal-card">
         <button class="modal-close" type="button" aria-label="Close contact options">×</button>
         <p class="eyebrow">Contact MendMode</p>
-        <h2 id="contact-modal-title">Choose how to reach us.</h2>
-        <p>Send the problem, the device or app involved, and anything you already tried.</p>
-        <div class="modal-actions">
-          <a class="button primary" href="mailto:mendmodehelp@gmail.com">Email</a>
-          <a class="button secondary" href="https://wa.me/2348143656972" rel="noreferrer">WhatsApp</a>
-        </div>
+        <h2 id="contact-modal-title">Request help or book a time.</h2>
+        <form class="contact-form">
+          <label>
+            Name
+            <input name="name" type="text" autocomplete="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Device or app
+            <input name="device" type="text" placeholder="Laptop, phone, Gmail, WhatsApp..." required>
+          </label>
+          <label>
+            What is the problem?
+            <textarea name="issue" rows="4" placeholder="Explain what is happening and what you already tried." required></textarea>
+          </label>
+          <div class="form-grid">
+            <label>
+              Preferred date
+              <input name="date" type="date">
+            </label>
+            <label>
+              Preferred time
+              <input name="time" type="time">
+            </label>
+          </div>
+          <label>
+            How urgent is it?
+            <select name="urgency">
+              <option>Normal</option>
+              <option>Today if possible</option>
+              <option>Urgent</option>
+            </select>
+          </label>
+          <div class="modal-actions">
+            <button class="button primary" type="submit" data-send="email">Send Email</button>
+            <button class="button secondary" type="submit" data-send="whatsapp">Send WhatsApp</button>
+          </div>
+        </form>
       </div>
     </div>
 

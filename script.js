@@ -4,6 +4,7 @@ const timeLabel = document.querySelector("#local-time");
 const contactModal = document.querySelector("#contact-modal");
 const contactTriggers = document.querySelectorAll(".contact-trigger");
 const modalClose = document.querySelector(".modal-close");
+const contactForms = document.querySelectorAll(".contact-form");
 
 const savedTheme = localStorage.getItem("personal-site-theme");
 if (savedTheme) {
@@ -47,6 +48,49 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !contactModal.hidden) {
     closeContactModal();
   }
+});
+
+function buildRequestMessage(form) {
+  const data = new FormData(form);
+  const name = data.get("name") || "";
+  const device = data.get("device") || "";
+  const issue = data.get("issue") || "";
+  const date = data.get("date") || "Not selected";
+  const time = data.get("time") || "Not selected";
+  const urgency = data.get("urgency") || "Normal";
+
+  return [
+    "MendMode support request",
+    "",
+    `Name: ${name}`,
+    `Device/app: ${device}`,
+    `Issue: ${issue}`,
+    `Preferred date: ${date}`,
+    `Preferred time: ${time}`,
+    `Urgency: ${urgency}`
+  ].join("\n");
+}
+
+contactForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    const submitter = event.submitter;
+    const message = buildRequestMessage(form);
+
+    if (submitter?.dataset.send === "whatsapp") {
+      window.location.href = `https://wa.me/2348143656972?text=${encodeURIComponent(message)}`;
+      return;
+    }
+
+    const subject = encodeURIComponent("MendMode support request");
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:mendmodehelp@gmail.com?subject=${subject}&body=${body}`;
+  });
 });
 
 function updateTime() {
