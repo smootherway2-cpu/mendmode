@@ -5,6 +5,10 @@
     {
       "source": "/case-studies",
       "destination": "/case-studies.html"
+    },
+    {
+      "source": "/website-development",
+      "destination": "/website-development.html"
     }
   ]
 }

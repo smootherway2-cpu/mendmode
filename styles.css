@@ -344,7 +344,7 @@ p {
 
 .overview-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -579,6 +579,20 @@ p {
   line-height: 1.45;
 }
 
+.text-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent-strong);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
 .price-card li::before {
   position: absolute;
   top: 0.3rem;
@@ -619,13 +633,15 @@ p {
   color: var(--muted);
 }
 
-.example-grid {
+.example-grid,
+.build-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.example-grid article {
+.example-grid article,
+.build-grid article {
   min-height: 260px;
   padding: 1.25rem;
   border: 1px solid var(--line);
@@ -633,14 +649,16 @@ p {
   background: var(--surface);
 }
 
-.example-grid span {
+.example-grid span,
+.build-grid span {
   display: inline-block;
   margin-bottom: 4rem;
   color: var(--accent-strong);
   font-weight: 900;
 }
 
-.example-grid p {
+.example-grid p,
+.build-grid p {
   margin: 0;
   color: var(--muted);
 }
@@ -860,6 +878,7 @@ footer {
   .proof-strip,
   .overview-grid,
   .example-grid,
+  .build-grid,
   .service-grid,
   .process-grid,
   .pricing-grid,
