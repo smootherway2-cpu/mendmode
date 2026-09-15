@@ -89,9 +89,10 @@ footer {
 .brand img {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: 0;
+  border-radius: 6px;
   object-fit: cover;
+  mix-blend-mode: screen;
 }
 
 .nav-links {
@@ -588,6 +589,11 @@ footer {
 .footer-brand img {
   width: 32px;
   height: 32px;
+}
+
+:root[data-theme="light"] .brand img {
+  filter: invert(1);
+  mix-blend-mode: multiply;
 }
 
 .modal-backdrop {
