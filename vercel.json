@@ -3,8 +3,8 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/examples",
-      "destination": "/examples.html"
+      "source": "/case-studies",
+      "destination": "/case-studies.html"
     }
   ]
 }
