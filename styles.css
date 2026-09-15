@@ -344,7 +344,7 @@ p {
 
 .overview-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -597,6 +597,32 @@ p {
   color: var(--muted);
 }
 
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.example-grid article {
+  min-height: 260px;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.example-grid span {
+  display: inline-block;
+  margin-bottom: 4rem;
+  color: var(--accent-strong);
+  font-weight: 900;
+}
+
+.example-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .promise {
   align-items: start;
 }
@@ -811,6 +837,7 @@ footer {
 
   .proof-strip,
   .overview-grid,
+  .example-grid,
   .service-grid,
   .process-grid,
   .pricing-grid,
