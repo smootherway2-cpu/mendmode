@@ -32,11 +32,24 @@
       </section>
 
       <section class="section">
+        <div class="currency-panel" aria-label="Currency estimate selector">
+          <div>
+            <p class="eyebrow">Currency checker</p>
+            <h2>View price estimates.</h2>
+            <p>NGN is the base price. USD and GBP are estimates using fixed reference rates.</p>
+          </div>
+          <div class="currency-toggle" role="group" aria-label="Choose display currency">
+            <button type="button" class="currency-option active" data-currency="NGN">NGN</button>
+            <button type="button" class="currency-option" data-currency="USD">USD</button>
+            <button type="button" class="currency-option" data-currency="GBP">GBP</button>
+          </div>
+        </div>
+
         <div class="pricing-grid">
           <article class="price-card">
             <div>
               <p class="price-label">Quick Fix</p>
-              <p class="price">From NGN 2,000</p>
+              <p class="price" data-ngn="2000">From NGN 2,000</p>
               <h3>Small issue, fast help</h3>
               <p>Best for one clear problem like an app error, login issue, setup question, or browser trouble.</p>
             </div>
@@ -51,7 +64,7 @@
           <article class="price-card featured">
             <div>
               <p class="price-label">Setup Help</p>
-              <p class="price">From NGN 5,000</p>
+              <p class="price" data-ngn="5000">From NGN 5,000</p>
               <h3>Get tools working properly</h3>
               <p>For new devices, software installs, app configuration, email setup, accounts, and workflow setup.</p>
             </div>
@@ -66,7 +79,7 @@
           <article class="price-card">
             <div>
               <p class="price-label">Full Cleanup</p>
-              <p class="price">From NGN 10,000</p>
+              <p class="price" data-ngn="10000">From NGN 10,000</p>
               <h3>Clean up the bigger mess</h3>
               <p>For slow systems, messy files, poor organization, backup setup, security basics, and repeated friction.</p>
             </div>

@@ -466,6 +466,54 @@ p {
   min-height: 390px;
 }
 
+.currency-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 84%, transparent);
+}
+
+.currency-panel h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+}
+
+.currency-panel p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+}
+
+.currency-toggle {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.currency-option {
+  min-width: 72px;
+  min-height: 42px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.currency-option.active {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
 .price-card.featured {
   border-color: color-mix(in srgb, var(--accent) 70%, var(--line));
   background:
@@ -761,8 +809,17 @@ footer {
   .overview-grid,
   .service-grid,
   .process-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .currency-panel {
     grid-template-columns: 1fr;
+  }
+
+  .currency-toggle {
+    width: 100%;
+  }
+
+  .currency-option {
+    flex: 1;
   }
 
   .proof-strip {

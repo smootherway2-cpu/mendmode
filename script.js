@@ -5,6 +5,13 @@ const contactModal = document.querySelector("#contact-modal");
 const contactTriggers = document.querySelectorAll(".contact-trigger");
 const modalClose = document.querySelector(".modal-close");
 const contactForms = document.querySelectorAll(".contact-form");
+const currencyOptions = document.querySelectorAll(".currency-option");
+const priceLabels = document.querySelectorAll(".price[data-ngn]");
+const exchangeRates = {
+  NGN: 1,
+  USD: 1325,
+  GBP: 1788
+};
 
 const savedTheme = localStorage.getItem("personal-site-theme");
 if (savedTheme) {
@@ -92,6 +99,36 @@ contactForms.forEach((form) => {
     const subject = encodeURIComponent("MendMode support request");
     const body = encodeURIComponent(message);
     window.location.href = `mailto:mendmodehelp@gmail.com?subject=${subject}&body=${body}`;
+  });
+});
+
+function formatPrice(amount, currency) {
+  if (currency === "NGN") {
+    return `From NGN ${Math.round(amount).toLocaleString("en-NG")}`;
+  }
+
+  const converted = amount / exchangeRates[currency];
+  return `About ${new Intl.NumberFormat("en", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 2
+  }).format(converted)}`;
+}
+
+function updateCurrency(currency) {
+  priceLabels.forEach((label) => {
+    const amount = Number(label.dataset.ngn);
+    label.textContent = formatPrice(amount, currency);
+  });
+
+  currencyOptions.forEach((option) => {
+    option.classList.toggle("active", option.dataset.currency === currency);
+  });
+}
+
+currencyOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    updateCurrency(option.dataset.currency);
   });
 });
 
