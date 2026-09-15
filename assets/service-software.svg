@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="title">
+  <title id="title">Software help visual</title>
+  <rect width="560" height="360" rx="20" fill="#f4f0e8"/>
+  <rect x="58" y="48" width="444" height="264" rx="24" fill="#10201c"/>
+  <rect x="58" y="48" width="444" height="54" rx="24" fill="#172b25"/>
+  <circle cx="96" cy="75" r="7" fill="#df6a5c"/>
+  <circle cx="120" cy="75" r="7" fill="#e1b84c"/>
+  <circle cx="144" cy="75" r="7" fill="#43c27f"/>
+  <rect x="92" y="134" width="144" height="18" rx="9" fill="#e8f6ef" opacity=".75"/>
+  <rect x="92" y="180" width="286" height="14" rx="7" fill="#e8f6ef" opacity=".2"/>
+  <rect x="92" y="216" width="210" height="14" rx="7" fill="#e8f6ef" opacity=".2"/>
+  <rect x="92" y="252" width="332" height="14" rx="7" fill="#e8f6ef" opacity=".2"/>
+  <path d="M390 150h50m-25-25v50" stroke="#d9ad43" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="415" cy="150" r="62" fill="none" stroke="#2f8f83" stroke-width="16"/>
+</svg>

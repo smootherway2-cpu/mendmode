@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">MendMode mark</title>
+  <defs>
+    <linearGradient id="mark-bg" x1="24" y1="20" x2="136" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2f8f83"/>
+      <stop offset="1" stop-color="#d9ad43"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#07130f" flood-opacity=".26"/>
+    </filter>
+  </defs>
+  <rect width="160" height="160" rx="34" fill="#101814"/>
+  <path d="M31 52c0-11 9-20 20-20h58c11 0 20 9 20 20v56c0 11-9 20-20 20H51c-11 0-20-9-20-20V52Z" fill="url(#mark-bg)" filter="url(#shadow)"/>
+  <path d="M53 102V58h14l13 22 13-22h14v44H92V82L82 99h-4L68 82v20H53Z" fill="#fff8ea"/>
+  <path d="M45 116h70" stroke="#fff8ea" stroke-width="8" stroke-linecap="round" opacity=".88"/>
+</svg>

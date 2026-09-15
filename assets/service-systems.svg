@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="title">
+  <title id="title">Systems setup visual</title>
+  <rect width="560" height="360" rx="20" fill="#eaf3f4"/>
+  <circle cx="280" cy="180" r="104" fill="#16241f"/>
+  <circle cx="280" cy="180" r="58" fill="#2f8f83"/>
+  <circle cx="280" cy="180" r="18" fill="#fff8ea"/>
+  <path d="M280 76v-34M280 318v-34M176 180h-34M418 180h-34M207 107l-24-24M377 277l-24-24M353 107l24-24M183 277l24-24" stroke="#16241f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M226 180h108" stroke="#d9ad43" stroke-width="16" stroke-linecap="round"/>
+</svg>
